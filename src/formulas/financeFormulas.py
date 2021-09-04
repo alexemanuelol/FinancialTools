@@ -3,7 +3,9 @@
 import math
 
 class FinanceFormulas():
-    """ Common finance formulas. """
+    """ Common finance formulas.
+        https://financeformulas.net/
+    """
 
     def annual_percentage_yield(self, statedAnnualInterestRate, numberOfTimesCompounded):
         """ Calculates 'Annual Percentage Yield (APY)'
