@@ -25,6 +25,7 @@ A collection of financial tools to calculate different investment aspects such a
 - Bid Ask Spread
 - Bond Equivalent Yield
 - Book Value per Share
+- Break-Event Point (BEP)
 - Capital Asset Pricing Model
 - Capital Gains Yield
 - Compound Interest

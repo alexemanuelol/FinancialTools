@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     obj = financeFormulas.FinanceFormulas()
     assert round(obj.annual_percentage_yield(.06, 12), 5) == .06168
+    assert round(obj.break_even_point(100, 20, 10), 2) == 10.0
     assert round(obj.cost_of_goods_sold(100, 200, 150), 2) == 150.0
     assert round(obj.future_value_of_annuity(1000, .02, 5), 2) == 5204.04
     assert round(obj.future_value_of_annuity_with_continuous_compounding(1000, .005, 12), 2) == 12336.42

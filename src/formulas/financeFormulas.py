@@ -19,6 +19,20 @@ class FinanceFormulas():
         return ((1 + (statedAnnualInterestRate / numberOfTimesCompounded)) ** numberOfTimesCompounded) - 1
 
 
+    def break_even_point(self, fixedCosts, salesPricePerUnit, variableCostsPerUnit):
+        """ Calculates 'Break-Even Point (BEP)'
+
+            fixedCosts = (number)
+            salesPricePerUnit = (number)
+            variableCostsPerUnit = (number)
+
+            The formula is the point where a company’s revenues equals its costs. The calculation for the break-even
+            point can be done one of two ways; one is to determine the amount of units that need to be sold, or the
+            second is the amount of sales, in dollars, that need to happen.
+        """
+        return fixedCosts / (salesPricePerUnit - variableCostsPerUnit)
+
+
     def cost_of_goods_sold(self, openingInventoryValue, purchases, closingInventoryValue):
         """ Calculates 'Cost of Goods Sold (COGS)'
 
