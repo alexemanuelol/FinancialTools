@@ -97,6 +97,7 @@ A collection of financial tools to calculate different investment aspects such a
 - Price to Cash Flows (P/CF Ratio)
 - Price to Dividend (P/Div Ratio)
 - Price to Earnings (P/E Ratio)
+- Price to Earnings to Growth Rate (PEG Ratio)
 - Price to Sales (P/S Ratio)
 - Profitability Index
 - Quick Ratio

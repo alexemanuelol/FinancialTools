@@ -103,6 +103,7 @@ if __name__ == "__main__":
     assert round(obj.price_to_cash_flows_ratio(500, 50), 2) == 10.0
     assert round(obj.price_to_dividend_ratio(75, 5), 2) == 15.0
     assert round(obj.price_to_earnings_ratio(43, 23), 3) == 1.87
+    assert round(obj.price_to_earnings_to_growth_ratio(10, .28), 3) == 35.714
     assert round(obj.price_to_sales_ratio(76, 55), 3) == 1.382
     assert round(obj.profitability_index(950.96, 1000), 3) == .951
     assert round(obj.quick_ratio(543, 56), 3) == 9.696

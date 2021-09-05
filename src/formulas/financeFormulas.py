@@ -1228,6 +1228,19 @@ class FinanceFormulas():
         return pricePerShare / earningsPerShare
 
 
+    def price_to_earnings_to_growth_ratio(self, pricePerEarningsRate, earningsGrowthRate):
+        """ Calculates 'Price/Earnings to Growth Ratio (PEG Ratio)'
+
+            pricePerEarningsRate = (number)
+            earningsGrowthRate = Percentage (0-1)
+
+            The formula is a measure that compares the company's stock price with its earnings and expected growth
+            rates. It can be interpreted as the price that investors are willing to pay for $1 of earnings given
+            1% of the expected growth rate.
+        """
+        return pricePerEarningsRate / earningsGrowthRate
+
+
     def price_to_sales_ratio(self, sharePrice, salesPerShare):
         """ Calculates 'Price to Sales Ratio (P/S Ratio)'
 
