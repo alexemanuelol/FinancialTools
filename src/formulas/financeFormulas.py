@@ -566,6 +566,18 @@ class FinanceFormulas():
         return 1 / rateOfReturn
 
 
+    def earnings_growth_rate(self, retentionRate, returnOnEquity):
+        """ Calculates 'Earnings Growth Rate'
+
+            retentionRate = Percentage (0-1)
+            returnOnEquity = Percentage (0-1)
+
+            The formula is calculating the company's growth rate which requires 2 inputs, namely the retention rate
+            and the return on equity (ROE) of the company.
+        """
+        return retentionRate * returnOnEquity
+
+
     def earnings_per_share(self, netIncome, weightedAverageOutstandingShares):
         """ Calculates 'Earnings Per Share (EPS)'
 
