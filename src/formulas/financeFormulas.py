@@ -19,6 +19,19 @@ class FinanceFormulas():
         return ((1 + (statedAnnualInterestRate / numberOfTimesCompounded)) ** numberOfTimesCompounded) - 1
 
 
+    def cost_of_goods_sold(self, openingInventoryValue, purchases, closingInventoryValue):
+        """ Calculates 'Cost of Goods Sold (COGS)'
+
+            openingInventoryValue = (number)
+            purchases = (number)
+            closingInventoryValue = (number)
+
+            The formula calculates by adding purchases for the period to the beginning inventory and subtracting
+            the ending inventory for the period.
+        """
+        return openingInventoryValue + purchases - closingInventoryValue
+
+
     def future_value_of_annuity(self, periodicPayment, ratePerPeriod, numberOfPeriods):
         """ Calculates 'Future Value of Annuity'
 

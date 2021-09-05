@@ -32,6 +32,7 @@ A collection of financial tools to calculate different investment aspects such a
 - Contribution Margin
 - Current Ratio
 - Current Yield
+- Cost of Goods Sold (COGS)
 - Days in Inventory
 - Debt Coverage Ratio
 - Debt Ratio
