@@ -56,6 +56,7 @@ A collection of financial tools to calculate different investment aspects such a
 - FV - Continuous Compounding
 - Future Value Factor
 - Geometric Mean Return
+- Gross Profit
 - Gross Profit Margin
 - Growing Annuity - Future Value
 - Growing Annuity - Payment (PV)

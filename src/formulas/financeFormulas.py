@@ -690,6 +690,18 @@ class FinanceFormulas():
         return 0
 
 
+    def gross_profit(self, salesRevenue, costOfGoodsSold):
+        """ Calculates 'Gross Profit'
+
+            salesRevenue = (number)
+            costOfGoodsSold = (number)
+
+            The formula is the profit a company makes after deducting the costs associated with making and selling
+            its products, or the costs associated with providing its services.
+        """
+        return salesRevenue - costOfGoodsSold
+
+
     def gross_profit_margin(self, salesRevenue, costOfGoodsSold):
         """ Calculates 'Gross Profit Margin'
 

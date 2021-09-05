@@ -62,6 +62,7 @@ if __name__ == "__main__":
     assert round(obj.future_value_with_continuous_compounding(3000, .04, 4), 2) == 3520.53
     assert round(obj.future_value_factor(.01, 12), 4) == 1.1268
     assert round(obj.geometric_mean_return([.04, .05, .06, .07]), 5) == .05494
+    assert round(obj.gross_profit(200, 100), 2) == 100.0
     assert round(obj.gross_profit_margin(20000000, 10000000), 2) == .5
     assert round(obj.future_value_of_growing_annuity(2000, .03, .05, 5), 2) == 11700.75
     assert round(obj.growing_annuity_payment_from_present_value(100, 0.1, 0.15, 6), 2) == 16.36
