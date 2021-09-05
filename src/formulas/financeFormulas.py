@@ -579,6 +579,18 @@ class FinanceFormulas():
         return netIncome / weightedAverageOutstandingShares
 
 
+    def earnings_per_share_growth_rate(self, initialEarningsPerShare, endingEarningsPerShare):
+        """ Calculates 'Earnings Per Share Growth Rate (EPS Growth Rate)'
+
+            initialEarningsPerShare = (number)
+            endingEarningsPerShare = (number)
+
+            The formula refers to the positive change between earnings per share values reported by the company. In
+            other words, it refers to how much EPS has increased over a defined amount of time.
+        """
+        return (endingEarningsPerShare - initialEarningsPerShare) / initialEarningsPerShare
+
+
     def equity_multiplier(self, totalAssets, stockholdersEquity):
         """ Calculates 'Equity Multiplier'
 
@@ -1012,8 +1024,8 @@ class FinanceFormulas():
             currentAssets = (number)
             currentLiabilities = (number)
 
-            The formula is sometimes referred to as simply working capital, is used to determine the availability
-            of a company's liquid assets by subtracting its current liabilities.
+            The formula is sometimes referred to as simply working capital or the accounting equation, is used to
+            determine the availability of a company's liquid assets by subtracting its current liabilities.
         """
         return currentAssets - currentLiabilities
 

@@ -54,6 +54,7 @@ if __name__ == "__main__":
     assert round(obj.doubling_time_with_continuous_compounding(.06), 2) == 11.55
     assert round(obj.doubling_time_for_simple_interest(.25), 2) == 4.0
     assert round(obj.earnings_per_share(125, 3), 2) == 41.67
+    assert round(obj.earnings_per_share_growth_rate(100, 172), 2) == .72
     assert round(obj.equity_multiplier(125, 8), 3) == 15.625
     assert round(obj.equivalent_annual_annuity(100000, .08, 4), 2) == 30192.08
     assert round(obj.estimated_earnings(500, 400), 2) == 100.0

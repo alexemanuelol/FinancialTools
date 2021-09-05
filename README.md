@@ -47,7 +47,8 @@ A collection of financial tools to calculate different investment aspects such a
 - Doubling Time
 - Doubling Time - Cont. Compounding
 - Doubling Time - Simple Interest
-- Earnings Per Share
+- Earnings Per Share (EPS)
+- Earnings Per Share Growth Rate (EPS Growth Rate)
 - Equity Multiplier
 - Equivalent Annual Annuity
 - Estimated Earnings
