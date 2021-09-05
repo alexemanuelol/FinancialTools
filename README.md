@@ -1,2 +1,115 @@
 # FinancialTools
 A collection of financial tools to calculate different investment aspects such as yearly return on investment and average return per year.
+
+## Formulas / Equations
+
+- Annual Percentage Yield (APY)
+- Annuity - Future Value
+- Annuity - Future Value w/ Continuous Compounding
+- Annuity - (FV) Solve for n
+- Annuity - Payment (PV)
+- Annuity - Payment (FV)
+- Annuity - Payment Factor (PV)
+- Annuity - Present Value
+- Annuity - Present Value w/ Continuous Compounding
+- Annuity - (PV) Solve for n
+- Annuity - PV Factor
+- Annuity Due - Present Value
+- Annuity Due - Future Value
+- Annuity Due Payment (PV)
+- Annuity Due Payment (FV)
+- Asset to Sales Ratio
+- Asset Turnover Ratio
+- Avg Collection Period
+- Balloon Loan - Payments
+- Bid Ask Spread
+- Bond Equivalent Yield
+- Book Value per Share
+- Capital Asset Pricing Model
+- Capital Gains Yield
+- Compound Interest
+- Continuous Compounding
+- Contribution Margin
+- Current Ratio
+- Current Yield
+- Days in Inventory
+- Debt Coverage Ratio
+- Debt Ratio
+- Debt to Equity Ratio
+- Debt to Income Ratio (D/I)
+- Diluted Earnings Per Share
+- Discounted Payback Period
+- Dividend Payout Ratio
+- Dividend Yield - Stock
+- Dividends Per Share
+- Doubling Time
+- Doubling Time - Cont. Compounding
+- Doubling Time - Simple Interest
+- Earnings Per Share
+- Equity Multiplier
+- Equivalent Annual Annuity
+- Estimated Earnings
+- Free Cash Flow to Equity (FCFE)
+- Free Cash Flow to Firm (FCFF)
+- Future Value
+- FV - Continuous Compounding
+- Future Value Factor
+- Geometric Mean Return
+- Gross Profit Margin
+- Growing Annuity - Future Value
+- Growing Annuity - Payment (PV)
+- Growing Annuity - Payment (FV)
+- Growing Annuity - Present Value
+- Growing Perpetuity - Present Value
+- Holding Period Return
+- Interest Coverage Ratio
+- Inventory Turnover Ratio
+- Interest Rate Parity
+- Loan - Balloon Balance
+- Loan - Payment
+- Loan - Remaining Balance
+- Loan to Deposit Ratio
+- Loan to Value (LTV)
+- Net Asset Value
+- Net Interest Income
+- Net Interest Margin
+- Net Interest Spread
+- Net Present Value
+- Net Profit Margin
+- Net Working Capital
+- Number of Periods - PV & FV
+- Operating Margin
+- Payback Period
+- Perpetuity - PV
+- Perpetuity Payment
+- Perpetuity Yield
+- Preferred Stock
+- Present Value
+- Present Value Factor
+- PV - Continuous Compounding
+- PV - Continuous Compounding Factor
+- Price to Book Value (P/BV Ratio)
+- Price to Cash Flows (P/CF Ratio)
+- Price to Dividend (P/Div Ratio)
+- Price to Earnings (P/E Ratio)
+- Price to Sales (P/S Ratio)
+- Profitability Index
+- Quick Ratio
+- Rate of Inflation
+- Real Rate of Return
+- Receivables Turnover Ratio
+- Retention Ratio
+- Return on Assets (ROA)
+- Return on Equity (ROE)
+- Return on Investment
+- Risk Premium
+- Rule of 72
+- Simple Interest
+- Stock - PV with Constant Growth
+- Stock - PV with Zero Growth
+- Tax Equivalent Yield
+- Total Stock Return
+- Weighted Average
+- Yield to Maturity
+- Zero Coupon Bond Value
+- Zero Coupon Bond Yield
