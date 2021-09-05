@@ -250,7 +250,7 @@ class FinanceFormulas():
             payments are made.
         """
         return (presentValue - (balloonAmount / ((1 + ratePerPeriod) ** numberOfPeriods))) * \
-            self.calculate_annuity_payment_factor(ratePerPeriod, numberOfPeriods)
+            self.annuity_payment_factor(ratePerPeriod, numberOfPeriods)
 
 
     def bid_ask_spread(self, bid, ask):
