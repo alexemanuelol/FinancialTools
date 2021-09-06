@@ -21,13 +21,18 @@ if __name__ == "__main__":
     ans = input("Enter Years (Default 40): ")
     years = 40 if ans == "" else int(ans)
 
+    flatratetax = False
+    ans = input("Should Flat-Rate tax be included? (y/n) (Default y): ")
+    flatratetax = True if ans.lower() == "y" or ans == "" else False
+
     totalSum = totalSaved = startCapital
     totalGained = 0
 
     print("\nStart Capital: ".ljust(25) + format_number(startCapital))
     print("Monthly Save:  ".ljust(25) + format_number(monthlySave))
     print("Yearly Return: ".ljust(25) + str(format_number(round((yearlyReturn) * 100)) + " %"))
-    print("Years:         ".ljust(25) + format_number(years) + "\n")
+    print("Years:         ".ljust(25) + format_number(years))
+    print("Flat-Rate Tax included: ".ljust(25) + str(flatratetax) + "\n")
 
     string = "Year:".ljust(8)
     string += "Gained:".ljust(15)
@@ -47,22 +52,24 @@ if __name__ == "__main__":
 
         # If the end of a year.
         if (month % 12) == 0 and month != 0:
-            compound = fm.continuous_compounding(totalSum, yearlyReturn, 1)
-            gained = compound - totalSum
-            totalGained += gained
+            compound = fm.compound_interest(totalSum, yearlyReturn, 1)
+            totalGained += compound
 
             quaterValues = list()
             for i in range(4):
-                quaterValues.append(totalSum + ((gained / 3) * i))
+                quaterValues.append(totalSum + ((compound / 3) * i))
 
             tax = isk.calculate_flat_rate_tax(quaterValues, 0, .0002)
-            totalSum = compound - tax
+            if flatratetax:
+                totalSum += compound - tax
+            else:
+                totalSum += compound
 
             line = str(yearCounter).ljust(8)
-            line += format_number(gained).ljust(15)
-            line += format_number(gained / 12).ljust(15)
+            line += format_number(compound).ljust(15)
+            line += format_number(compound / 12).ljust(15)
             line += format_number(tax).ljust(15)
-            line += "{:.2f}".format((tax/gained) * 100).ljust(10)
+            line += "{:.2f}".format((tax/compound) * 100).ljust(10)
             line += format_number(totalSaved).ljust(15)
             line += format_number(totalGained).ljust(15)
             line += format_number(totalSum)
