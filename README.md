@@ -20,6 +20,7 @@ A collection of financial tools to calculate different investment aspects such a
 - Annuity Due Payment (FV)
 - Asset to Sales Ratio
 - Asset Turnover Ratio
+- Average Rate of Return Per Year
 - Avg Collection Period
 - Balloon Loan - Payments
 - Bid Ask Spread

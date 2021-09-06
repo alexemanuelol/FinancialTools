@@ -10,13 +10,25 @@ class FinanceFormulas():
     def annual_percentage_yield(self, statedAnnualInterestRate, numberOfTimesCompounded):
         """ Calculates 'Annual Percentage Yield (APY)'
 
-            statedAnnualInterestRate = Percentage (0-1)
+            statedAnnualInterestRate = Percentage (number)
             numberOfTimesCompounded = (number)
 
             Referenced as the effective annual rate in finance, is the rate of interest that is earned when taking
             into consideration the effect of compounding.
         """
         return ((1 + (statedAnnualInterestRate / numberOfTimesCompounded)) ** numberOfTimesCompounded) - 1
+
+
+    def average_rate_of_return_per_year(self, totalRateOfReturn, years):
+        """ Calculates 'Average Rate of Return Per Year'
+
+            totalRateOfReturn = Percentage (number)
+            years = (number)
+
+            The formula is used to calculate the average rate of return per year, given the total rate of return for
+            'years' period of time.
+        """
+        return (totalRateOfReturn ** (1 / years)) - 1
 
 
     def break_even_point(self, fixedCosts, salesPricePerUnit, variableCostsPerUnit):
@@ -50,7 +62,7 @@ class FinanceFormulas():
         """ Calculates 'Future Value of Annuity'
 
             periodicPayment = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate what the value at a future date would be for a series of periodic
@@ -63,7 +75,7 @@ class FinanceFormulas():
         """ Calculates 'Future Value of Annuity - Continuous Compounding'
 
             cashFlow = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used to calculate the ending balance on a series of periodic payments that are compounded
@@ -76,7 +88,7 @@ class FinanceFormulas():
         """ Calculates 'Number of Periods for Future Value of Annuity'
 
             futureValueOfAnnuity = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             payment = (number)
 
             The formula is used to calculate the number of periods based on the future value, rate and periodic cash
@@ -89,7 +101,7 @@ class FinanceFormulas():
         """ Calculates 'Annuity Payment Present Value'
 
             presentValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the periodic payment on an annuity. An annuity is a series of periodic
@@ -102,7 +114,7 @@ class FinanceFormulas():
         """ Calculates 'Annuity Payment Future Value'
 
             futureValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the cash flows of an annuity when future value is known. An annuity is
@@ -114,7 +126,7 @@ class FinanceFormulas():
     def annuity_payment_factor(self, ratePerPeriod, numberOfPeriods):
         """ Calculates 'Annuity Payment Factor'
 
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to simplify calculations for an annuity payment. Specifically for simplifying payment
@@ -127,7 +139,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Annuity'
 
             periodicPayment = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula determines the value of a series of future periodic payments at a given time. The formula
@@ -141,7 +153,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Annuity - Continuous Compounding'
 
             cashFlow = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             time = (number)
 
             The formula is used to calculate the initial value of a series of periodic payments when the rate is
@@ -154,7 +166,7 @@ class FinanceFormulas():
         """ Calculates 'Number of Periods for Present Value of Annuity'
 
             presentValueOfAnnuity = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             payment = (number)
 
             The formula is used to determine the number of periods on an annuity using the present value, periodic
@@ -166,7 +178,7 @@ class FinanceFormulas():
     def present_value_annuity_factor(self, ratePerPeriod, numberOfPeriods):
         """ Calculates 'Present Value Annuity Factor'
 
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the present value of future one dollar cash flows.
@@ -178,7 +190,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Annuity Due'
 
             periodicPayment = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is sometimes referred to as an immediate annuity, is used to calculate a series of periodic
@@ -192,7 +204,7 @@ class FinanceFormulas():
         """ Calculates 'Future Value of Annuity Due'
 
             periodicPayment = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the ending value of a series of payments or cash flows where the first
@@ -207,7 +219,7 @@ class FinanceFormulas():
         """ Calculates 'Annuity Due Payment Using Present Value'
 
             presentValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate each installment of a series of cash flows or payments when the first
@@ -221,7 +233,7 @@ class FinanceFormulas():
         """ Calculates 'Annuity Due Payment Using Future Value'
 
             futureValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate each equal cash flow or payment of a series of cash flows when the
@@ -270,7 +282,7 @@ class FinanceFormulas():
 
             presentValue = (number)
             balloonAmount = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the payments on a loan that has a balance remaining after all periodic
@@ -321,9 +333,9 @@ class FinanceFormulas():
     def capital_asset_pricing_model(self, riskFreeRate, beta, returnOnTheMarket):
         """ Calculates 'Capital Asset Pricing Model (CAPM)'
 
-            riskFreeRate = Percentage (0-1)
+            riskFreeRate = Percentage (number)
             beta = (number)
-            returnOnTheMarket = Percentage (0-1)
+            returnOnTheMarket = Percentage (number)
 
             The formula calculates the expected return on a security based on its level of risk. The formula
             is the risk free rate plus beta times the difference of the return on the market and the risk free rate.
@@ -348,7 +360,7 @@ class FinanceFormulas():
         """ Calculates 'Compound Interest'
 
             principal = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula calculates the amount of interest earned on an account or investment where the amount earned
@@ -361,7 +373,7 @@ class FinanceFormulas():
         """ Calculates 'Continuous Compounding'
 
             principal = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used to determine the interest earned on an account that is constantly compounded,
@@ -488,7 +500,7 @@ class FinanceFormulas():
         """ Calculates 'Discounted Payback Period (DPP)'
 
             initialInvestment = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             periodicCashFlow = (number)
 
             The formula is used to calculate the length of time to recoup an investment based on the investment's
@@ -537,7 +549,7 @@ class FinanceFormulas():
     def doubling_time(self, rateOfReturn):
         """ Calculates 'Doubling Time'
 
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
 
             The formula is used in finance to calculate the length of time required to double an investment or money
             in an interest bearing account.
@@ -548,7 +560,7 @@ class FinanceFormulas():
     def doubling_time_with_continuous_compounding(self, rateOfReturn):
         """ Calculates 'Doubling Time - Continuous Compounding'
 
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
 
             The formula with continuous compounding is the natural log of 2 divided by the rate of return.
         """
@@ -558,7 +570,7 @@ class FinanceFormulas():
     def doubling_time_for_simple_interest(self, rateOfReturn):
         """ Calculates 'Doubling Time - Simple Interest'
 
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
 
             The formula is simply 1 divided bt the periodic rate. The formula is used to calculate how long it would
             take to double the balance on an interesting bearing account that has simple interest.
@@ -569,8 +581,8 @@ class FinanceFormulas():
     def earnings_growth_rate(self, retentionRate, returnOnEquity):
         """ Calculates 'Earnings Growth Rate'
 
-            retentionRate = Percentage (0-1)
-            returnOnEquity = Percentage (0-1)
+            retentionRate = Percentage (number)
+            returnOnEquity = Percentage (number)
 
             The formula is calculating the company's growth rate which requires 2 inputs, namely the retention rate
             and the return on equity (ROE) of the company.
@@ -619,7 +631,7 @@ class FinanceFormulas():
         """ Calculates 'Equivalent Annual Annuity'
 
             netPresentValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used in capital budgeting to show the net present value of an investment as a series of
@@ -661,7 +673,7 @@ class FinanceFormulas():
         """ Calculates 'Free Cash Flow to Firm (FCFF)'
 
             ebit = (number)
-            taxRate = Percentage (0-1)
+            taxRate = Percentage (number)
             depreciationAndAmortization = (number)
             capitalExpenditure = (number)
             changeInWorkingCapital = (number)
@@ -676,7 +688,7 @@ class FinanceFormulas():
         """ Calculates 'Future Value'
 
             initialCashFlow = (number)
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used in finance to calculate the value of a value of a cash flow at a later date than
@@ -690,7 +702,7 @@ class FinanceFormulas():
         """ Calculates 'Future Value - Continuous Compounding'
 
             presentValue = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used in calculating the later value of a current sum of money.
@@ -701,7 +713,7 @@ class FinanceFormulas():
     def future_value_factor(self, ratePerPeriod, numberOfPeriods):
         """ Calculates 'Future Value Factor'
 
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the future value of an amount per dollar of its present value. The future
@@ -757,8 +769,8 @@ class FinanceFormulas():
         """ Calculates 'Future Value of Growing Annuity'
 
             firstPayment = (number)
-            ratePerPeriod = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
+            growthRate = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the future amount of a series of cash flows, or payments, that grow
@@ -773,8 +785,8 @@ class FinanceFormulas():
         """ Calculates 'Growing Annuity Payment - Present Value'
 
             presentValue = (number)
-            ratePerPeriod = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
+            growthRate = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the initial payment of a series of periodic payments that grow at a
@@ -789,8 +801,8 @@ class FinanceFormulas():
         """ Calculates 'Growing Annuity Payment - Future Value'
 
             futureValue = (number)
-            ratePerPeriod = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
+            growthRate = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the first cash flow or payment of a series of cash flows that grow at
@@ -804,8 +816,8 @@ class FinanceFormulas():
         """ Calculates 'Present Value of a Growing Annuity'
 
             firstPayment = (number)
-            ratePerPeriod = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
+            growthRate = Percentage (number)
             numberOfPeriods = (number)
 
             The formula calculates the present day value of a series of future periodic payments that grow at a
@@ -819,8 +831,8 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Growing Perpetuity'
 
             dividendOrCouponAtFirstPeriod = (number)
-            discountRate = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            discountRate = Percentage (number)
+            growthRate = Percentage (number)
 
             The formula is the cash flow after the first period divided by the difference between the discount rate
             and the growth rate.
@@ -873,7 +885,7 @@ class FinanceFormulas():
     def interest_rate_parity(self, interestRateForCurrencyY, forwardExchangeRateXY, spotExchangeRateXY):
         """ Calculates 'Interest Rate Parity'
 
-            interestRateForCurrencyY = Percentage (0-1)
+            interestRateForCurrencyY = Percentage (number)
             forwardExchangeRateXY = (number)
             spotExchangeRateXY = (number)
 
@@ -889,7 +901,7 @@ class FinanceFormulas():
 
             presentValue = (number)
             payment = (number)
-            ratePerPayment = Percentage (0-1)
+            ratePerPayment = Percentage (number)
             numberOfPayments = (number)
 
             The formula is used to calculate the amount due at the end of a balloon loan.
@@ -902,7 +914,7 @@ class FinanceFormulas():
         """ Calculates 'Loan Payment'
 
             presentValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the payments on a loan. The formula used to calculate loan payments
@@ -917,7 +929,7 @@ class FinanceFormulas():
 
             presentValue = (number)
             payment = (number)
-            ratePerPayment = Percentage (0-1)
+            ratePerPayment = Percentage (number)
             numberOfPayments = (number)
 
             The formula can be used to calculate the remining balance at a given time (time n), whether at a future
@@ -1005,7 +1017,7 @@ class FinanceFormulas():
 
             initialInvestment = (number)
             cashFlows = (list)
-            discountRate = Percentage (0-1)
+            discountRate = Percentage (number)
 
             The formula is used to determine the present value of an investment by the discounted sum of all cash
             flows received from the project.
@@ -1047,7 +1059,7 @@ class FinanceFormulas():
 
             futureValue = (number)
             presentValue = (number)
-            ratePerPeriod = Percentage (0-1)
+            ratePerPeriod = Percentage (number)
 
             The formula is used to calculate the length of time required for a single cash flow (present value) to
             reach a certain amount (future value) based on the time value of money.
@@ -1084,7 +1096,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Perpetuity'
 
             dividendOrCouponPerPeriod = (number)
-            discountRate = Percentage (0-1)
+            discountRate = Percentage (number)
 
             A perpetuity is a type of annuity that receives an infinite amount of periodic payments. An annuity is a
             financial instrument that pays consistent periodic payments. As with any annuity, the perpetuity value
@@ -1097,7 +1109,7 @@ class FinanceFormulas():
         """ Calculates 'Perpetuity Payment'
 
             presentValue = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
 
             The formula for the payment on a perpetuity is its present value times its rate. A perpetuity is a type
             of annuity where the payments continue on infinitely.
@@ -1122,7 +1134,7 @@ class FinanceFormulas():
         """ Calculates 'Preferred Stock'
 
             dividend = (number)
-            discountRate = Percentage (0-1)
+            discountRate = Percentage (number)
 
             The formula is for a simple straight preferred stock that does not have additional features, such as
             those found in convertible, retractable, and callable preferred stocks. A preferred stock is a type of
@@ -1135,7 +1147,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value'
 
             cashFlowAtFirstPeriod = (number)
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used in Finance that calculates the present day value of an amount that is received at
@@ -1147,7 +1159,7 @@ class FinanceFormulas():
     def present_value_factor(self, rateOfReturn, numberOfPeriods):
         """ Calculates 'Present Value Factor'
 
-            rateOfReturn = Percentage (0-1)
+            rateOfReturn = Percentage (number)
             numberOfPeriods = (number)
 
             The formula is used to calculate the present value per dollar that is received in the future.
@@ -1159,7 +1171,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value - Continuous Compounding'
 
             cashFlow = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used to calculate the current value of a future amount that has earned at a continuously
@@ -1171,7 +1183,7 @@ class FinanceFormulas():
     def present_value_with_continuous_compounding_factor(self, rate, time):
         """ Calculates 'Present Value - Continuous Compounding Factor'
 
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used to calculate the present value of $1 received at a future date, discounted on a
@@ -1232,7 +1244,7 @@ class FinanceFormulas():
         """ Calculates 'Price/Earnings to Growth Ratio (PEG Ratio)'
 
             pricePerEarningsRate = (number)
-            earningsGrowthRate = Percentage (0-1)
+            earningsGrowthRate = Percentage (number)
 
             The formula is a measure that compares the company's stock price with its earnings and expected growth
             rates. It can be interpreted as the price that investors are willing to pay for $1 of earnings given
@@ -1294,8 +1306,8 @@ class FinanceFormulas():
     def real_rate_of_return(self, nominalRate, inflationRate):
         """ Calculates 'Real Rate of Return'
 
-            nominalRate = Percentage (0-1)
-            inflationRate = Percentage (0-1)
+            nominalRate = Percentage (number)
+            inflationRate = Percentage (number)
 
             The formula is the sum of one plus the nominal rate divided by the sum of one plus the inflation rate
             which then is subtracted by one. The formula for the real rate of return can be used to determine the
@@ -1380,7 +1392,7 @@ class FinanceFormulas():
     def rule_of_72(self, rate):
         """ Calculates 'Rule of 72'
 
-            rate = Percentage (0-1)
+            rate = Percentage (number)
 
             The formula is used to estimate the length of time required to double an investment. The rule of 72
             is primarily used in off the cuff situations where an individual needs to make a quick calculation
@@ -1393,7 +1405,7 @@ class FinanceFormulas():
         """ Calculates 'Simple Interest'
 
             principal = (number)
-            rate = Percentage (0-1)
+            rate = Percentage (number)
             time = (number)
 
             The formula is used to calculate the interest accrued on a loan or savings account that has simple
@@ -1407,8 +1419,8 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Stock - Constant Growth'
 
             estimatedDividendsForNextPeriod = (number)
-            requiredRateOfReturn = Percentage (0-1)
-            growthRate = Percentage (0-1)
+            requiredRateOfReturn = Percentage (number)
+            growthRate = Percentage (number)
 
             The formula is the estimated dividends to be paid divided by the difference between the required rate of
             return and the growth rate.
@@ -1420,7 +1432,7 @@ class FinanceFormulas():
         """ Calculates 'Present Value of Stock - Zero Growth'
 
             dividendsPerPeriod = (number)
-            requiredRateOfReturn = Percentage (0-1)
+            requiredRateOfReturn = Percentage (number)
 
             The formula is dividends per period divided by the required return per period.
         """
@@ -1430,8 +1442,8 @@ class FinanceFormulas():
     def tax_equivalent_yield(self, taxFreeYield, taxRate):
         """ Calculates 'Tax Equivalent Yield'
 
-            taxFreeYield = Percentage (0-1)
-            taxRate = Percentage (0-1)
+            taxFreeYield = Percentage (number)
+            taxRate = Percentage (number)
 
             The formula is used to compare the yield between a tax-free investment and an investment that is taxed.
         """
@@ -1483,7 +1495,7 @@ class FinanceFormulas():
         """ Calculates 'Zero Coupon Bond Value'
 
             faceValue = (number)
-            rateOrYield = Percentage (0-1)
+            rateOrYield = Percentage (number)
             timeToMaturity = (number)
 
             The formula, sometimes referred to as a pure discount bond or simply discount bond, is a bond that does
