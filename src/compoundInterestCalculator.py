@@ -39,7 +39,7 @@ if __name__ == "__main__":
     string += "Tot Saved:".ljust(15)
     string += "Tot Gained:".ljust(15)
     string += "Tot Capital:".ljust(15)
-    string += "\n" + ("-" * 105)
+    string += "\n" + ("-" * 95)
     print(string)
 
     totalCapital = totalSaved = startCapital
