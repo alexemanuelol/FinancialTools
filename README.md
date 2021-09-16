@@ -1,5 +1,5 @@
 # FinancialTools
-A collection of financial tools to calculate different investment aspects such as yearly return on investment and average return per year.
+A collection of financial tools/formulas to calculate key figures, banking terms, stock and bond terms, corporate or miscellaneous things.
 
 ## Formulas / Equations
 
