@@ -27,7 +27,8 @@ if __name__ == "__main__":
 
     avgRateOfReturnPerMonth = fm.average_rate_of_return_per_year(rateOfReturn + 1, 12)
 
-    print("\nStart Capital: ".ljust(25) + format_number(startCapital))
+    print()
+    print("Start Capital: ".ljust(25) + format_number(startCapital))
     print("Monthly Deposit:  ".ljust(25) + format_number(monthlyDeposit))
     print("Rate of Return: ".ljust(25) + str(format_number(round((rateOfReturn) * 100)) + " %"))
     print("Years to Save:         ".ljust(25) + format_number(yearsToSave))
